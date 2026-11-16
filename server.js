@@ -1,16 +1,16 @@
-// API da Escola — versão inicial para a atividade.
-// ATENÇÃO: há problemas intencionais a serem corrigidos pelos alunos.
+// Solução de referência da atividade The Twelve-Factor App.
+// Esta versão carrega configurações do ambiente, sem valores fixos no código.
 
+require('dotenv').config();
 const express = require('express');
 const app = express();
 
-// PROBLEMA 1: nome da escola fixo no código.
-const nomeEscola = 'Escola de Informática';
+// Fator III — configuração mantida no ambiente.
+const nomeEscola = process.env.NOME_ESCOLA || 'Sistema Escolar';
 
-// PROBLEMA 2: porta fixa no código.
-const PORT = 3000;
+// Fator VII — aplicação oferece HTTP em uma porta configurável.
+const PORT = Number(process.env.PORT) || 3000;
 
-// Dados fictícios: não há banco de dados nesta atividade.
 const alunos = [
   { id: 1, nome: 'Ana', curso: 'Desenvolvimento de Sistemas' },
   { id: 2, nome: 'Bruno', curso: 'Desenvolvimento de Sistemas' },
