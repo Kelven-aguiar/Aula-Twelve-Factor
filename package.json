@@ -1,0 +1,13 @@
+{
+  "name": "aula-twelve-factor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Projeto inicial da atividade Twelve-Factor para curso técnico",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
